@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do app</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class='header'>
+            <h1 class="header__headline">To Do App</h1>
+        </header>
+        <main class='main'>
+            <button class="button button--show-form">Nowe zadanie</button>
+                <form class="add-task hidden" method="post">
+                    <div class="add-task__flex-container">      
+                    <div class="add-task__column add-task__column--left">
+                        <label class='add-task__label' for="taskTitle">Temat zadania:</label>
+                        <input class='add-task__input' type="text" name="taskTitle" id="taskTitle">
+                        <label class='add-task__label' for="taskDate">Termin zadania:</label>
+                        <input class='add-task__input' type="date" name="taskDate" id="taskDate" min="2021-01-27">
+                        <label class='add-task__label' for="taskPriority">Priorytet zadania:</label>
+                        <select class='add-task__select' name="taskPriority" id="taskPriority">
+                            <option value="low">Niski</option>
+                            <option value="medium">Średni</option>
+                            <option value="high">Wysoki</option>
+                        </select>
+                    </div>
+                    <div class="add-task__column">
+                        <label class='add-task__label' for="taskDescription">Opis zadania:</label>
+                        <textarea class='add-task__input add-task__input--textarea ' name="taskDescription" id="taskDescription" cols="" rows="10"></textarea>
+                    </div>
+                </div> 
+                    <button type='submit' class="button button--send-form">Wyślij</button>
+                </form>
+                <div class="form-result hidden"></div>
+            <section class="tasks">
+                <h2 class="tasks__headline">Twoje zadania:</h2>
+            </section>
+        </main>
+        <footer class='footer'>
+            @Michał Depa
+        </footer>
+    </div>
+    <script src="js/main.js" type='module'></script>
+</body>
+</html>

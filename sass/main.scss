@@ -1,0 +1,224 @@
+@import '_reset.scss';
+@import '_colors.scss';
+@import '_fonts.scss';
+
+body {
+    background-color: $bodyBackgroundColor;
+    color: $textColor;
+    padding: .5rem 1rem;
+}
+
+.container {
+    margin: .0 auto;
+    max-width: 1000px;
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: $backgroundColor;
+    min-height: calc(100vh - 1rem);
+    position: relative;
+    
+}
+
+.header {
+    background-color: $primaryColor;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.main {
+    padding: 0 2rem;
+    min-height: 70vh;
+}
+.add-task {
+    
+
+    &__flex-container {
+        display: flex;
+    }
+
+
+    &__headline {
+        text-align: center;
+    }
+
+    &__column {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+
+        &--left {
+            justify-content: space-between;
+            margin-right: 2rem;
+        }
+    }
+
+    &__select {
+        color: $backgroundColor;
+        height: 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    &__input {
+        color: $backgroundColor;
+        height: 1.8rem;
+        font-size: 1.3rem;
+        padding: 1rem 0;
+
+
+        
+        &--textarea {
+            height: 100%;
+        }
+    }
+
+    &__label {
+        font-size: 1re;
+        cursor: pointer;
+
+        &[for="taskDescription"] {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.tasks {
+    margin: 2rem 0;
+
+    &__task {
+        margin-top: .8rem;
+        width: 100%;
+        background-color: $backgroundColor;
+        border-radius: .5rem;
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-box-shadow: 2px 2px 6px 4px rgba(245,243,244,0.26); 
+        box-shadow: 2px 2px 6px 4px rgba(245,243,244,0.26);
+    }
+
+    &__main {
+        display: flex;
+        font-weight: bold;;
+        padding-bottom: .5rem;
+        background-color: $taskMainColor;
+        padding: .5rem 2rem;
+        border-radius: .5rem;
+        -webkit-box-shadow: 2px 2px 6px 4px rgba(245,243,244,0.26); 
+        box-shadow: 2px 2px 6px 4px rgba(245,243,244,0.26);
+
+        &__column {
+            width: 60%;
+            display: flex;
+            align-items: center;
+
+            &--right {
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__desc {
+        padding-top: .5rem;
+        padding: 1rem 2rem;      
+    }
+
+    &__prior {
+        border-radius: 50%;
+        height: 1.4rem;
+        width: 1.4em;
+        border: outset .1rem $textColor;
+    }
+
+    &__date {
+        display: block;
+        background-color: $backgroundColor;
+        padding: .3rem 1rem;
+        border-radius: 1rem;
+        border: 1px $textColor outset;
+        
+
+    }
+}
+
+.form-result {
+    margin: 1rem 0;
+    background-color: #ffd6d0;
+    color: #e0110b;
+    border: .2rem inset #e0110b; 
+
+    padding: 1rem;
+
+    &__error {
+        padding: 1rem 0;
+    }
+}
+
+.footer {
+    background-color: $primaryColor;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.button {
+    color: $textColor;
+    background-color: $primaryColor;
+    border: solid 2px $textColor;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    
+    &:hover {
+        background-color: $primaryColor-hover;
+        color: $textColor-hover;
+        border-color: $textColor-hover;
+    }
+
+    &:active {
+        background-color: $textColor-hover;
+        color: $primaryColor-hover;
+        border-color: $primaryColor-hover;
+    } 
+
+
+    &--show-form {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 1rem;
+        margin: 2rem auto 0 auto;
+    }
+
+    &--send-form {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 1rem;
+        margin: 0 auto;
+    }
+
+    &--delete {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: .5rem;
+        
+
+        background-color: #e0110b;
+        color: #ffd6d0;
+        border-color: #ffd6d0;
+
+        &:hover {
+            background-color: #ffd6d0;
+            color: #e0110b;
+            border-color: #e0110b;
+        }
+    }
+    
+}
+
+.hidden {
+    display: none;
+}
+
