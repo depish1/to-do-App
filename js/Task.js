@@ -20,6 +20,7 @@ export class Task {
     const priorElement = this.createPriorityElement();
     const dateElement = this.createDateElement();
     const deleteButton = this.createTaskDeleteButton();
+    console.log("x");
 
     mainLeft.textContent = this.title;
     mainElement.classList.add("tasks__main");
